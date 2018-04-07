@@ -68,28 +68,47 @@
     // }
     // sortBubble(masSort);
     // console.log(masSort);
+    //
+    // masSort = [412, 31, 55, 7, 63, 38, 13, 1, 97, 123, 3, 25];
+    //
+    // console.log(masSort);
+    // function sortInsert(mas) {
+    //   for (let i = mas.length - 1; i >= 1; i--) {
+    //
+    //     for (let j = i-1; j < mas.length - 1; j++) {
+    //       if(mas[j] > mas[j+1]) {
+    //         let tmp = mas[j];
+    //         mas[j] = mas[j+1];
+    //         mas[j+1] = tmp;
+    //       }
+    //     }
+    //     console.log(masSort);
+    //   }
+    // }
+    // sortInsert(masSort);
+    // console.log(masSort);
+
 
     masSort = [412, 31, 55, 7, 63, 38, 13, 1, 97, 123, 3, 25];
 
     console.log(masSort);
-    function sortInsert(mas) {
-      for (let i = mas.length - 1; i >= 1; i--) {
-
-        for (let j = i-1; j < mas.length - 1; j++) {
-          if(mas[j] > mas[j+1]) {
-            let tmp = mas[j];
-            mas[j] = mas[j+1];
-            mas[j+1] = tmp;
+    function sortChoise(mas) {
+      for (let i = mas.length-1; i >= 1; i--) {
+        let max = 0;
+        for (let j = 1; j < i; j++) {
+          if(mas[j] > mas[max]) {
+            max=j;
           }
+
         }
+        let tmp = mas[i];
+        mas[i] = mas[max];
+        mas[max] = tmp;
         console.log(masSort);
       }
     }
-    sortInsert(masSort);
+    sortChoise(masSort);
     console.log(masSort);
-
-
-
   </script>
 </body>
 </html>
