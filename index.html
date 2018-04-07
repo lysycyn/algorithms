@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const mas = [
+      {name: "test", value: 5},
+      {name: "test2", value: 6},
+    ];
+
+    function parse(mas) {
+      return mas.reduce((res, field) => {
+        res[field.name] = field.value;
+        return res;
+      }, {});
+    }
+
+    // console.log(parse(mas));
+
+
+    const n = 4;
+
+    function writeMassive(n) {
+      // let isFront = true;
+      // let str;
+      // let mas = [];
+      // for (let i = 0; i < n; i++) {
+      //   let mas1 = []
+      //   for (let j = 0; j < n; j++) {
+      //     mas1.push(0);
+      //   }
+      //   mas.push(mas1);
+      // }
+      //
+      // for (let i = 0; i < n; i++) {
+      //   str = '';
+      //   for (let j = 1; j <= n; j++) {
+      //     if (isFront) {
+      //       str += i*n + j + " ";
+      //     }
+      //
+      //   }
+      //   console.log(str);
+      // }
+    }
+
+    // writeMassive(n);
+
+
+    masSort = [46, 234, 1, 2934, 34, 567, 98];
+    console.log(masSort);
+
+    function sortBubble(mas) {
+      for (let i = 0; i < mas.length; i++) {
+        for (let j = 0; j <= mas.length; j++) {
+          if(mas[j] > mas[j+1]) {
+            let tmp = mas[j];
+            mas[j] = mas[j+1];
+            mas[j+1] = tmp;
+          }
+        }
+      }
+    }
+    sortBubble(masSort);
+    console.log(masSort);
+  </script>
+</body>
+</html>
