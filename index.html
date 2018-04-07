@@ -52,22 +52,39 @@
     // writeMassive(n);
 
 
-    masSort = [46, 234, 1, 2934, 34, 567, 98];
-    console.log(masSort);
+    // masSort = [46, 234, 1, 2934, 34, 567, 98];
+    // console.log(masSort);
+    //
+    // function sortBubble(mas) {
+    //   for (let i = 0; i < mas.length; i++) {
+    //     for (let j = 0; j <= mas.length; j++) {
+    //       if(mas[j] > mas[j+1]) {
+    //         let tmp = mas[j];
+    //         mas[j] = mas[j+1];
+    //         mas[j+1] = tmp;
+    //       }
+    //     }
+    //   }
+    // }
+    // sortBubble(masSort);
+    // console.log(masSort);
 
-    function sortBubble(mas) {
-      for (let i = 0; i < mas.length; i++) {
-        for (let j = 0; j <= mas.length; j++) {
-          if(mas[j] > mas[j+1]) {
+    masSort = [46, 234, 1, 2934, 34, 567, 98, 8, 765];
+    console.log(masSort);
+    function sortInsert(mas) {
+      for (let i = mas.length - 1; i >= 1; i--) {
+        for (let j = mas.length - 1; j >= i-1; j--) {
+          if(mas[j] < mas[j-1]) {
             let tmp = mas[j];
-            mas[j] = mas[j+1];
-            mas[j+1] = tmp;
+            mas[j] = mas[j-1];
+            mas[j-1] = tmp;
           }
         }
       }
     }
-    sortBubble(masSort);
+    sortInsert(masSort);
     console.log(masSort);
+
   </script>
 </body>
 </html>
