@@ -6,11 +6,13 @@
     if (this.length === 1) return this;
 
     for (var i = 1; i < this.length; i++) {
-      for (var j = i; i > 0 && this[j-1] > this[j]; j--) {
-        var buf = this[j];
+      let candidate = this[i];
+      let index = i;
+      for (var j = i; i > 0 && this[j-1] > candidate; j--) {
         this[j] = this[j-1];
-        this[j-1] = buf;
+        index = j-1;
       }
+      this[index] = candidate;
     }
     return this;
   }
